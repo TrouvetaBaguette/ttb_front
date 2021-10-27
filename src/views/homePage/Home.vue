@@ -11,7 +11,7 @@
         </div>
         <div class="container py-3">
             <h3>Boulangerie prés de vous</h3>
-            <p>Trouve ta baguette te permet de trouver les meilleurs produits des boulangerie autour de chez toi, notes les produits que tu prends dans une boulangerie pour permettre une fiabilité des informations.</p>
+            <p>Trouve ta baguette te permet de trouver les meilleurs produits des boulangerie autour de chez toi, notes les produits que tu prends dans une boulangerie pour permettre une fiabilité des informations</p>
         </div>
 
 

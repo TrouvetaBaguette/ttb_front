@@ -1,12 +1,11 @@
 <template>
     <div>
         <div class="container">
-            <img class="w-100 pt-4" :src="require('../../assets/image/pastries.jpg')"/>
+            <img alt="patisserie" class="w-100 pt-4" :src="require('../../assets/image/pastries.jpg')"/>
         </div>
         <div class="container">
             <form class="d-flex form-inline my-2 my-lg-0 text">
                 <input class="form-control font-weight-light border-radius-25" type="search" placeholder="Votre localisation, Le nom de la boulangerie, Le nom de produit" aria-label="Search">
-<!--                <button class="btn btn-outline-success" type="submit">Search</button>-->
             </form>
         </div>
         <div class="container py-3">

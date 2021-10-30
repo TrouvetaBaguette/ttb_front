@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top shadow">
         <a class="navbar-brand">
-            <img class="w-50" :src="require('../../assets/image/brandLogo.svg')" />
+            <img alt="logo" class="w-50" :src="require('../../assets/image/brandLogo.svg')" />
         </a>
         <ul>
             <li>

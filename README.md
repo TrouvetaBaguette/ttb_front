@@ -11,7 +11,7 @@ npm run serve
 ```
 ### Architecture générale du logiciel sans les microservices v.01
 
-![](https://drive.google.com/file/d/1YpJPvcIybnV3ckAF_UdG7K9LvxREMNHm/view?usp=sharing)
+![](https://user-images.githubusercontent.com/57746806/134734427-ed0bd766-7da0-477b-856e-9320c226db14.png)
 
 ### Fonction réalisée
 

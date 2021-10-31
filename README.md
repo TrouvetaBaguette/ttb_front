@@ -9,9 +9,11 @@ __Lancement de notre application sur votre serveur local__
 ```
 npm run serve
 ```
-### Architecture générale du logiciel sans les microservices v.01
+### Architecture détaillée du logiciel (Architecture général v.01 et Diagramme de déploiement)
 
-![](https://user-images.githubusercontent.com/57746806/134734427-ed0bd766-7da0-477b-856e-9320c226db14.png)
+![Architecture générale v.01](https://user-images.githubusercontent.com/57746806/134734427-ed0bd766-7da0-477b-856e-9320c226db14.png)
+
+![Diagramme de deploiement de Trouve Ma Baguette](https://user-images.githubusercontent.com/61032599/139596611-90872b98-8ba4-4566-a90a-a85036c91dfe.jpg)
 
 ### Fonction réalisée
 

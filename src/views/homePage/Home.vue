@@ -11,6 +11,7 @@
         <div class="container py-3">
             <h3>Boulangerie prés de vous !</h3>
             <p>Trouve ta baguette te permet de trouver les meilleurs produits des boulangerie autour de chez toi, notes les produits que tu prends dans une boulangerie pour permettre une fiabilité des informations</p>
+            <p>{{ info }}</p>
         </div>
 
 
@@ -19,10 +20,20 @@
 
 <script>
 
+import axios from "axios";
+
 export default {
     name: "Home",
-    components: {
-
+    data: function() {
+        return {
+            info: {},
+        }
+    },
+    mounted () {
+        axios
+            .get('https://api.adviceslip.com/advice')
+            .then(response => (this.info = response))
+            .catch(error => (console.log(error)))
     }
 }
 </script>

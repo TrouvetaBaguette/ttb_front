@@ -11,7 +11,23 @@
         <div class="container py-3">
             <h3>Boulangerie prés de vous !</h3>
             <p>Trouve ta baguette te permet de trouver les meilleurs produits des boulangerie autour de chez toi, notes les produits que tu prends dans une boulangerie pour permettre une fiabilité des informations</p>
-            <p>{{ info }}</p>
+            <div class="flex-container">
+                <div class="row justify-content-start">
+                    <img alt="patisserie" :src="require('../../assets/image/boulangerie1.jpg')"/>
+                    <h5 class="fw-bold pt-1">AUX PETITS DELICES</h5>
+                    <h6>95480 Pierrelaye</h6>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <img alt="patisserie" :src="require('../../assets/image/boulangerie2.jpg')"/>
+                    <h5 class="fw-bold pt-1">ATELIERS DES PAINS & CO</h5>
+                    <h6>92000 Nanterre</h6>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <img alt="patisserie" :src="require('../../assets/image/boulangerie3.jpg')"/>
+                    <h5 class="fw-bold pt-1">LES SAVEURS DE JOSEPH</h5>
+                    <h6>35000 Rennes</h6>
+                </div>
+            </div>
         </div>
 
 
@@ -31,7 +47,7 @@ export default {
     },
     mounted () {
         axios
-            .get('https://api.adviceslip.com/advice')
+            .get('http://localhost:8081/')
             .then(response => (this.info = response))
             .catch(error => (console.log(error)))
     }
@@ -59,6 +75,21 @@ export default {
 
 .border-radius-25 {
     border-radius: 25px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #F0E9DE;
+}
+
+.flex-container > div {
+    background-color: #F0E9DE;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
 }
 
 </style>

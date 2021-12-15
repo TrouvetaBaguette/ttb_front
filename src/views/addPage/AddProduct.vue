@@ -141,7 +141,7 @@ export default {
     },
     methods: {
         addProduct: function (){
-            console.log("envoyé")
+            console.log("Le produit " + this.Product.name + " coûte " + this.Product.price + "€")
             this.$router.push({path: '/'});
         }
     }

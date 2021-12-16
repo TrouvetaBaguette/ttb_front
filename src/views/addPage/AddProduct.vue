@@ -1,7 +1,7 @@
 <template>
     <div class="container d-flex justify-content-center align-items-center">
         <form v-on:submit.prevent="addProduct">
-            <h3 style="color: #4E3883" class="pt-3">Produit</h3>
+            <h3 style="color: #4E3883" class="pt-3">Produit {{info}}</h3>
 
             <small><span class="text-danger">*</span>champs requis</small>
 
@@ -93,12 +93,16 @@
 
 <script>
 
+import axios from "axios";
+import qs from 'qs';
+
 var number = /[+-]?(\d*[.])?\d+/;
 
 export default {
     name: "AddProduct",
     data: function() {
         return {
+            info: '',
             Product: {
                 name: '',
                 price: '',
@@ -142,8 +146,20 @@ export default {
     methods: {
         addProduct: function (){
             console.log("Le produit " + this.Product.name + " coûte " + this.Product.price + "€")
+            axios
+                .post('http://localhost:8080/addProduct', qs.stringify(this.Product), {useCredentails: true})
+                .then(res => {console.log(res.data);})
+                .catch(err => {console.log(err.response);
+                });
             this.$router.push({path: '/'});
         }
+    },
+    mounted () {
+        // axios
+        //     .get('http://localhost:8080/product/test')
+        //     .then(response => (this.info = response))
+        //     .catch(error => (console.log(error)))
+
     }
 }
 </script>

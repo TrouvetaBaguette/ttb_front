@@ -94,9 +94,6 @@
 <script>
 
 import axios from "axios";
-import qs from 'qs';
-
-var number = /[+-]?(\d*[.])?\d+/;
 
 export default {
     name: "AddProduct",
@@ -122,44 +119,15 @@ export default {
             },
         }
     },
-    computed: {
-        validation: function () {
-            return {
-                name: !!this.Product.name.trim(),
-                price: number.test(this.Product.price),
-                ingredients: !!this.Product.ingredients.trim(),
-                size: number.test(this.Product.size),
-                calories: number.test(this.Product.calories),
-                protein: number.test(this.Product.protein),
-                sugar: number.test(this.Product.sugar),
-                fiber: number.test(this.Product.fiber),
-                fat: number.test(this.Product.fat),
-                calcium: number.test(this.Product.calcium),
-                cholesterol: number.test(this.Product.cholesterol),
-                sodium: number.test(this.Product.sodium),
-                potassium: number.test(this.Product.potassium),
-                vitaminA: number.test(this.Product.vitaminA),
-                vitaminC: number.test(this.Product.vitaminC),
-            }
-        },
-    },
     methods: {
         addProduct: function (){
-            console.log("Le produit " + this.Product.name + " coûte " + this.Product.price + "€")
             axios
-                .post('http://localhost:8080/addProduct', qs.stringify(this.Product), {useCredentails: true})
+                .post('http://localhost:8080/addProduct', {label : this.Product.name, price: this.Product.price}, {useCredentails: true})
                 .then(res => {console.log(res.data);})
                 .catch(err => {console.log(err.response);
                 });
             this.$router.push({path: '/'});
         }
-    },
-    mounted () {
-        // axios
-        //     .get('http://localhost:8080/product/test')
-        //     .then(response => (this.info = response))
-        //     .catch(error => (console.log(error)))
-
     }
 }
 </script>

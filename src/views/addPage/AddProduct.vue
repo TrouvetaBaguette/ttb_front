@@ -1,7 +1,7 @@
 <template>
     <div class="container d-flex justify-content-center align-items-center">
         <form v-on:submit.prevent="addProduct">
-            <h3 style="color: #4E3883" class="pt-3">Produit {{info}}</h3>
+            <h3 style="color: #4E3883" class="pt-3">Produit</h3>
 
             <small><span class="text-danger">*</span>champs requis</small>
 
@@ -99,7 +99,6 @@ export default {
     name: "AddProduct",
     data: function() {
         return {
-            info: '',
             Product: {
                 name: '',
                 price: '',

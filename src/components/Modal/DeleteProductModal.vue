@@ -1,5 +1,5 @@
 <template>
-    <div class="bootstrap-modal-no-jquery">
+    <div class="">
         <div class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content" style="background-color: #F0F4F8">
@@ -34,7 +34,7 @@ export default {
         },
         deleteProduct() {
             axios
-                .delete('http://localhost:8080/product/delete/'+ this.info.id)
+                .delete('http://localhost:8080/product/delete/', {headers: { "x-access-token": "token-value" }, data: { id: this.info.id }})
                 .then(res => {console.log(res.data);})
                 .catch(err => {console.log(err.response);
                 });
@@ -43,7 +43,7 @@ export default {
     },
     mounted() {
         axios
-            .get('http://localhost:8080/product/flan')
+            .get('http://localhost:8080/productById/'+this.$route.query['id'])
             .then(response => (this.info = response.data))
             .catch(error => (console.log(error)))
     }
@@ -51,7 +51,6 @@ export default {
 </script>
 
 <style scoped>
-/* Override default value of 'none' */
 .modal {
     display: block;
 }

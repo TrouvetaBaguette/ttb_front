@@ -1,5 +1,5 @@
 # Front
-## Version 0.3
+## Version 0.5
 ### Documentation
 __Installation des dependencies pour le projet__
 ```
@@ -27,9 +27,21 @@ __Workflow des wireframes__
 
 ![Workflow des wireframes](https://user-images.githubusercontent.com/61032599/141541320-d9b02724-4485-4a3a-aef0-fff541abdf1f.png)
 
+__Modèle de données (e.g., MCD)__
+
+![Modèle de données (e.g., MCD)](https://user-images.githubusercontent.com/61032599/146588762-03e35aa6-b5c2-4a1e-87e9-af3bb1ad4ee1.png)
+
+__Diagramme de classe détaillée__
+
+![Diagramme de classe détaillée](https://user-images.githubusercontent.com/61032599/146588815-1c387d92-0652-4dc4-812d-ecf3dc059317.png)
+
+__Diagramme de composants__
+
+![Diagramme de composants](https://user-images.githubusercontent.com/61032599/146588820-1ca4e5ae-4c90-4966-a040-f0a012967d14.png)
+
 ### Fonction réalisée
 
-Les fonctionalités effectués pour cette version sont l'ajout des produits pour les boulangeries et debut mise en place CORS.
+Les fonctionalités effectués pour cette version sont le debut de la resolution de la mise en place CORS et mise en place de l'affichage des boulangeries et produits en données brutes.
 
 ### Scrum board
 

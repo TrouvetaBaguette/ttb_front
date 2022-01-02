@@ -1,6 +1,6 @@
 <template>
     <div class="container d-flex justify-content-center align-items-center">
-        <form v-on:submit.prevent="addProduct">
+        <form v-on:submit.prevent="modifyProduct">
             <h3 style="color: #4E3883" class="pt-3">Produit</h3>
 
             <small><span class="text-danger">*</span>champs requis</small>
@@ -48,7 +48,7 @@ export default {
         }
     },
     methods: {
-        addProduct: function (){
+        modifyProduct: function (){
             axios
                 .put('http://localhost:8080/product/update', {id: this.info.id, label : this.info.label, price: this.info.price})
                 .then(res => {console.log(res.data);})

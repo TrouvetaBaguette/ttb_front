@@ -34,7 +34,7 @@ export default {
         },
         deleteProduct() {
             axios
-                .post('http://localhost:8080/product/delete/',{id: this.info.id} ,{useCredentails: true})
+                .delete('http://localhost:8080/product/delete/'+ this.info.id)
                 .then(res => {console.log(res.data);})
                 .catch(err => {console.log(err.response);
                 });

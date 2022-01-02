@@ -141,7 +141,7 @@ export default {
     },
     mounted() {
         axios
-            .get('http://localhost:8080/comment')
+            .get('http://localhost:8080/comments')
             .then(response => (this.info = response.data))
             .catch(error => (console.log(error)))
 

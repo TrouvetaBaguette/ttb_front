@@ -6,7 +6,7 @@
                 <h5 class="fw-bold pt-2">{{ info.label }}</h5>
                 <h6>{{ info.price }} €</h6>
                 <div class="d-flex justify-content-between pt-2">
-                    <button class="px-0 bg-white btn col-5">Modifier</button>
+                    <button class="px-0 bg-white btn col-5" @click="modifyProduct">Modifier</button>
                     <button class="px-0 bg-danger btn col-6" @click="deleteProduct">Supprimer</button>
                 </div>
             </div>
@@ -42,6 +42,9 @@ export default {
         }
     },
     methods : {
+        modifyProduct: function (){
+            this.$router.push({path: '/modifyProduct'});
+        },
         deleteProduct: function (){
             this.displayModal = true;
         },

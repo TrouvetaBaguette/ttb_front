@@ -59,7 +59,7 @@ export default {
     },
     mounted() {
         axios
-            .get('http://localhost:8080/product/flan')
+            .get('http://localhost:8080/productById/'+this.$route.query['id'])
             .then(response => (this.info = response.data))
             .catch(error => (console.log(error)))
     }

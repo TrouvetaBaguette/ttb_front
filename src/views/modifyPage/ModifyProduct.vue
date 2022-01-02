@@ -50,7 +50,7 @@ export default {
     methods: {
         addProduct: function (){
             axios
-                .post('http://localhost:8080/product/update', {id: this.info.id, label : this.info.label, price: this.info.price})
+                .put('http://localhost:8080/product/update', {id: this.info.id, label : this.info.label, price: this.info.price})
                 .then(res => {console.log(res.data);})
                 .catch(err => {console.log(err.response);
                 });

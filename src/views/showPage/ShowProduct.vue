@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="padding-top: 13%">
+    <div v-if="info" class="container" style="padding-top: 13%">
         <div class="d-flex flex-wrap w-100 h-100 justify-content-between align-items-center text-center" id="myTable">
             <div class="pt-4 pb-3 px-3" style="background-color: #F0F4F8">
                 <img :alt="info.label" class="w-50" :src=tableProductData[0].src>

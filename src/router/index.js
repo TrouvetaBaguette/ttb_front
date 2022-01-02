@@ -4,6 +4,7 @@ import Home from "@/views/homePage/Home";
 import AddProduct from "@/views/addPage/AddProduct";
 import ShowProduct from "@/views/showPage/ShowProduct";
 import ModifyProduct from "@/views/modifyPage/ModifyProduct";
+import ShowComment from "@/views/showPage/ShowComment";
 
 
 const routes = [
@@ -26,6 +27,11 @@ const routes = [
         path:"/modifyProduct",
         name:"Modification Produit",
         component: ModifyProduct
+    },
+    {
+        path:"/showComment",
+        name:"Affichage Commentaire",
+        component: ShowComment
     }
 ]
 

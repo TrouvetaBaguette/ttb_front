@@ -13,6 +13,9 @@
             <li>
                 <router-link to="/showProduct">Afficher Produit</router-link>
             </li>
+            <li>
+                <router-link to="/showComment">Commentaire</router-link>
+            </li>
         </ul>
         <button class="ms-auto btn px-4">Connexion</button>
     </nav>

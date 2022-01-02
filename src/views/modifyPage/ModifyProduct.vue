@@ -59,7 +59,7 @@ export default {
     },
     mounted() {
         axios
-            .get('http://localhost:8080/product/galette')
+            .get('http://localhost:8080/product/flan')
             .then(response => (this.info = response.data))
             .catch(error => (console.log(error)))
     }

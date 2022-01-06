@@ -61,13 +61,6 @@
                                           id="exampleInputReplyContent" required></textarea>
                             </div>
 
-                            <div class="form-group my-2">
-                                <label for="exampleInputReplyNote" style="color: #707070">Note</label><span
-                                class="text-danger">*</span>
-                                <input type="number" step="any" min="0" max="5" class="form-control"
-                                       v-model.number="Reply.note" id="exampleInputReplyNote" required>
-                            </div>
-
                             <button type="submit" class="btn btn-light my-2 col-12">Valider</button>
                         </form>
                     </div>
@@ -127,8 +120,7 @@ export default {
             axios
                 .post('http://localhost:8080/addComment', {
                     title: this.Reply.title,
-                    content: this.Reply.content,
-                    note: this.Reply.note
+                    content: this.Reply.content
                 })
                 .then(res => {
                     console.log(res.data);

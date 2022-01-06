@@ -17,6 +17,7 @@
                 <router-link to="/showComment">Commentaire</router-link>
             </li>
         </ul>
+        <a style="margin-left: 25rem" href="https://trouvetabaguette.github.io/Doc/">Acceder à notre documentation</a>
         <button class="ms-auto btn px-4">Connexion</button>
     </nav>
 </template>

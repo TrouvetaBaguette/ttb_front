@@ -47,6 +47,9 @@ export default {
         },
         hideModal() {
             this.displayModal = false;
+        },
+        delete(){
+            this.displayModal = true;
         }
     },
     mounted () {
@@ -54,7 +57,6 @@ export default {
             .get('http://localhost:8080/products')
             .then(response => (this.info = response.data))
             .catch(error => (console.log(error)))
-
     }
 }
 </script>

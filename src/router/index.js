@@ -5,6 +5,7 @@ import AddProduct from "@/views/addPage/AddProduct";
 import ShowProduct from "@/views/showPage/ShowProduct";
 import ModifyProduct from "@/views/modifyPage/ModifyProduct";
 import ShowComment from "@/views/showPage/ShowComment";
+import ReserveProduct from "@/views/reserveProduct/index";
 
 
 const routes = [
@@ -32,6 +33,11 @@ const routes = [
         path:"/showComment",
         name:"Affichage Commentaire",
         component: ShowComment
+    },
+    {
+        path:"/product/reserve",
+        name:"Reserver un Produit",
+        component: ReserveProduct
     }
 ]
 

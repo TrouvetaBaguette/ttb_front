@@ -14,6 +14,9 @@
                 <router-link to="/showProduct">Afficher Produit</router-link>
             </li>
             <li>
+                <router-link to="/product/reserve">Reservez un Produit</router-link>
+            </li>
+            <li>
                 <router-link to="/showComment">Commentaire</router-link>
             </li>
         </ul>

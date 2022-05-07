@@ -45,7 +45,7 @@ export default {
                 },
                 {
                     title: 'Client',
-                    link:'#'
+                    link:'/showProductClient'
                 }
             ]
         }

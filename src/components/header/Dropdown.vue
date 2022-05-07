@@ -28,20 +28,27 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 nav .menu-item svg {
     width: 10px;
     margin-left: 10px;
 }
+
+nav .menu-item{
+    padding: 2px;
+}
+
 nav .menu-item .sub-menu {
     position: absolute;
-    background-color: #222;
-    top: calc(100% + 18px);
+    background-color: #fff;
+    top: calc(100% + 1px);
     left: 50%;
     transform: translateX(-50%);
-    width: max-content;
+    width: 120px;
     border-radius: 0px 0px 16px 16px;
+    padding: 4px 4px;
 }
+
 .fade-enter-active,
 .fade-leave-active {
     transition: all .5s ease-out;
@@ -55,4 +62,11 @@ nav .menu-item .sub-menu {
     background: #D4BE9E;
     color: #000;
 }
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    padding: 1px 4px;
+}
+
 </style>

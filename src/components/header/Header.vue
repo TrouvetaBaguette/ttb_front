@@ -17,7 +17,7 @@
                 <router-link to="/showComment">Commentaire</router-link>
             </li>
             <li>
-                <dropdown title="Afficher Produit" :items="services"></dropdown>
+                <dropdown title="Afficher Produit" :items="affichageProduit"></dropdown>
             </li>
             <li>
                 <a href="https://trouvetabaguette.github.io/Doc/">Acceder à notre documentation</a>
@@ -38,7 +38,7 @@ export default {
     },
     data () {
         return {
-            services: [
+            affichageProduit: [
                 {
                     title: 'Boulangerie',
                     link: '/showProduct'

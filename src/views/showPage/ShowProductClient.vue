@@ -37,12 +37,12 @@ export default {
                 id: 1,
                 nom: 'Flan',
                 prix: '1.75',
-                src: require('../../assets/image/flan.png')
+                src: require('../../assets/image/flan.jpg')
             }, {
                 id: 2,
-                nom: 'Baguette',
+                nom: 'Macaron',
                 prix: '1.5',
-                src: require('../../assets/image/baguette.png')
+                src: require('../../assets/image/macaron.jpg')
             }],
         }
     },

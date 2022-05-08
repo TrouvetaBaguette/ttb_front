@@ -7,6 +7,7 @@ import ModifyProduct from "@/views/modifyPage/ModifyProduct";
 import ShowComment from "@/views/showPage/ShowComment";
 import ReserveProduct from "@/views/reserveProduct/index";
 import ShowProductClient from "@/views/showPage/ShowProductClient";
+import ShowProductInfo from "@/views/showPage/ShowProductInfo";
 
 
 const routes = [
@@ -29,6 +30,11 @@ const routes = [
         path:"/showProductClient",
         name:"Affichage Produit Client",
         component: ShowProductClient
+    },
+    {
+        path:"/showProductInfo",
+        name:"Affichage Information Produit",
+        component: ShowProductInfo
     },
     {
         path:"/modifyProduct",

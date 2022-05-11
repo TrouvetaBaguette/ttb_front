@@ -23,8 +23,9 @@
                 <a href="https://trouvetabaguette.github.io/Doc/">Acceder à notre documentation</a>
             </li>
         </ul>
-
+ <router-link to="/connexion">
         <button class="ms-auto btn px-4">Connexion</button>
+     </router-link>   
     </nav>
 </template>
 

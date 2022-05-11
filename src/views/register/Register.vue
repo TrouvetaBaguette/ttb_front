@@ -1,145 +1,149 @@
 <template>
-  <html>
+    <html>
     <head>
-      <meta charset="utf-8" />
-      <!-- importer le fichier de style -->
-      <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+        <meta charset="utf-8"/>
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css"/>
     </head>
     <body>
-      <div id="container">
+    <div id="container">
         <!-- zone de register -->
 
         <form v-on:submit.prevent="register">
-          <h1>Register</h1>
+            <h1>Register</h1>
 
-          <label><b>Nom d'utilisateur</b></label>
-          <input
-            type="text"
-            placeholder="Entrer le nom d'utilisateur"
-            name="username"
-            v-model="User.name"
-            required
-          />
+            <label><b>Nom d'utilisateur</b></label>
+            <input
+                type="text"
+                placeholder="Entrer le nom d'utilisateur"
+                name="username"
+                v-model="User.name"
+                required
+            />
 
-          <label><b>address utilisateur</b></label>
-          <input
-            type="text"
-            placeholder="Entrer l'address d'utilisateur"
-            name="address"
-            v-model="User.address"
-            required
-          />
+            <label><b>Adresse de l'utilisateur</b></label>
+            <input
+                type="text"
+                placeholder="Entrer l'address d'utilisateur"
+                name="address"
+                v-model="User.address"
+                required
+            />
 
-          <label><b>address email</b></label>
-          <input
-            type="text"
-            placeholder="Entrer l'address email"
-            name="email"
-            v-model="User.email"
-            required
-          />
+            <label><b>Adresse Mail</b></label>
+            <input
+                type="text"
+                placeholder="Entrer l'address email"
+                name="email"
+                v-model="User.email"
+                required
+            />
 
-          <label><b>Mot de passe</b></label>
-          <input
-            type="password"
-            placeholder="Entrer le mot de passe"
-            name="password"
-            v-model="User.password"
-            required
-          />
+            <label><b>Mot de passe</b></label>
+            <input
+                type="password"
+                placeholder="Entrer le mot de passe"
+                name="password"
+                v-model="User.password"
+                required
+            />
 
-          <input type="submit" id="submit" value="Register" />
+            <input type="submit" id="submit" value="Inscrire"/>
 
-          <a href="#" class="inscription"
-            >Vous avez déja un <span>compte</span>? Se <span>Connecté</span>
-          </a>
+            <a href="/connexion" class="inscription"
+            >Vous avez déja un <span>compte</span> ? Se <span>connecter</span>
+            </a>
         </form>
-      </div>
+    </div>
     </body>
-  </html>
+    </html>
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
-  name: "Register",
-  data: function() {
-    return {
-      User: {
-        name: "",
-        address: "",
-        email: "",
-        password: "",
-      },
-    };
-  },
-  methods: {
-    register: function() {
-      console.log(this.User);
-      axios
-        .post("http://localhost:8085/addClient", {
-          name: this.User.name,
-          address: this.User.address,
-          email: this.User.email,
-          password: this.User.password,
-        })
-        .then((res) => {
-          console.log(res.data);
-          this.$router.push({ path: "/connexion" });
-        })
-        .catch((err) => {
-          console.log(err.response);
-        });
+    name: "Register",
+    data: function () {
+        return {
+            User: {
+                name: "",
+                address: "",
+                email: "",
+                password: "",
+            },
+        };
     },
-  },
+    methods: {
+        register: function () {
+            console.log(this.User);
+            axios
+                .post("http://localhost:8080/addClient", {
+                    name: this.User.name,
+                    address: this.User.address,
+                    email: this.User.email,
+                    password: this.User.password,
+                })
+                .then((res) => {
+                    console.log(res.data);
+                    this.$router.push({path: "/connexion"});
+                })
+                .catch((err) => {
+                    console.log(err.response);
+                });
+        },
+    },
 };
 </script>
 
 <style scoped>
 #container {
-  width: 400px;
-  margin: 0 auto;
-  margin-top: 10%;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 2%;
 }
+
 /* Bordered form */
 form {
-  width: 100%;
-  padding: 30px;
-  border: 1px solid #f1f1f1;
-  background: #fff;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    width: 100%;
+    padding: 30px;
+    padding-top: 15px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 #container h1 {
-  width: 38%;
-  margin: 0 auto;
-  padding-bottom: 10px;
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 /* Full-width inputs */
 input[type="text"],
 input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 /* Set a style for all buttons */
 input[type="submit"] {
-  background-color: #785104;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+    background-color: #785104;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
+
 input[type="submit"]:hover {
-  background-color: white;
-  color: #b99316;
-  border: 1px solid #382817;
+    background-color: white;
+    color: #b99316;
+    border: 1px solid #382817;
 }</style
 >>
